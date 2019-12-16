@@ -1,0 +1,28 @@
+.btn {
+  border:0px none;
+  border-radius: 3%;
+  padding: 8px 12px;
+  color: rgb(255, 255, 255);
+  cursor:pointer;
+  font-family: 'Arial', cursive;
+}
+
+.btn--danger {
+  background-color: rgb(0, 0, 0);
+}
+
+.btn--danger:hover {
+  background-color: #000000;
+}
+
+.btn--action:hover {
+  background-color: rgb(0, 194, 42);
+}
+
+.btn--action {
+  background-color: rgb(255, 0, 0);
+}
+
+.btn--wrapper {
+  margin: 0px 0px 30px 0px;
+}

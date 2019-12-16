@@ -1,0 +1,16 @@
+input[type="submit"] {
+  text-transform: uppercase;
+  font-family: 'Arial'
+}
+
+select {
+ width: 150px;
+ padding: 5px 35px 5px 5px;
+ margin: 15px 0;
+ font-size: 0.8em;
+ -webkit-appearance: none;
+ background: url('/images/muscle.png') 96% / 15% no-repeat rgb(255, 255, 255);
+ font-family: 'Arial', serif;
+ border: 1px solid rgb(255, 255, 255);
+ display: block;
+} 
