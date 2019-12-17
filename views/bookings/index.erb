@@ -1,11 +1,9 @@
 <h1>Bookings</h1>
 
-<ul>
+<ol>
   <% for booking in @bookings %>
   <li>
   <p><%= booking.member.name %> <%= @actions.sample %> <%= booking.lesson.name %> </p>
   </li>
   <% end %>
-</ul>
-
-<input class="bookbutton" membership='submit' value="Add Member to Lesson">
+</ol>
