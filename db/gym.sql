@@ -6,8 +6,7 @@ CREATE TABLE members
 (
   id SERIAL primary key,
   name VARCHAR(255) not null,
-  membership VARCHAR(255),
-  age VARCHAR (255)
+  age INT
 );
 
 CREATE TABLE lessons
@@ -23,3 +22,4 @@ CREATE TABLE bookings
   lesson_id INT references lessons(id),
   member_id INT references members(id)
 );
+

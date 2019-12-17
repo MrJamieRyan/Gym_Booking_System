@@ -9,7 +9,6 @@ Lesson.delete_all()
 
 member1 = Member.new({
   "name" => "Jamie Ryan",
-  "membership" => "Super Buff",
   "age" => "35"
 })
 
@@ -17,7 +16,6 @@ member1.save()
 
 member2 = Member.new({
   "name" => "Lauren Osinski",
-  "membership" => "Beach Body Ready",
   "age" => "32"
 })
 
@@ -25,7 +23,6 @@ member2.save()
 
 member3 = Member.new({
   "name" => "Loki Dog",
-  "membership" => "Standard",
   "age" => "1"
 })
 
@@ -33,7 +30,6 @@ member3.save()
 
 member4 = Member.new({
   "name" => "Jake Davitt",
-  "membership" => "CBA",
   "age" => "15"
 })
 
@@ -93,6 +89,7 @@ booking4 = Booking.new({
 })
 
 booking4.save()
+
 
 binding.pry
 nil

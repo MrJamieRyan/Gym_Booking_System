@@ -1,11 +1,16 @@
-<h1>Member <%= @member.name %></h1>
+<link type="text/css" rel="stylesheet" href="style.css"/>  
 
-<p>Membership: <%= @member.membership %></p>
+<p>Here are the members details</p>
 
-<h3>This member has booked to attend the following lessons:</h3>
+<p>Name: <%=@member.name.capitalize%></p>
+<p>Age: <%=@member.age%></p>
 
-<ul>
-  <% @member.lessons.each do |lesson| %>
-  <li><%= lesson.name %></li>
-  <% end %>
-</ul>
+<form action="/members/<%=@member.id%>/edit" method="get">
+  <input type="submit" value="EDIT member">
+</form>
+
+<form action="/members/<%=@member.id%>/delete" method="post">
+  <input type="submit" value="DELETE member">
+</form>
+
+
