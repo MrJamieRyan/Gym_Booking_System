@@ -3,8 +3,11 @@
 <p>Here are the members details</p>
 
 <p>Name: <%=@member.name.capitalize%></p>
+<br>
 <p>Age: <%=@member.age%></p>
+<br>
 <p>Address: <%=@member.address%></p>
+<br>
 
 <form action="/members/<%=@member.id%>/edit" method="get">
   <input type="submit" value="EDIT member">

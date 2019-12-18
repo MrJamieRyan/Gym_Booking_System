@@ -1,14 +1,15 @@
 <h1>Members</h1>
-
-<div>
+<h2>
+<div class="members">
   <% @members.each do |member| %>
-  <div>
+
     <p>Name: <%= member.name %> </p>
     <a href="/members/<%=member.id%>">Show Details</a>
-  </div>
+    <br>
+
   <% end %>
 </div>
-
 <p class="btn--wrapper">
   <a class="btn btn--new" href="/members/new">New Member</a>
 </p>
+</h2>

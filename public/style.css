@@ -10,13 +10,14 @@ body {
   background-position: right bottom;
   background-attachment: fixed;
   background-size: 900px;
+  background-color: #d9d9d9;
 }
 
 body {
   height: 100vh;
   font-family: 'Rubik', sans-serif;
   color: black;
-  overflow: hidden;
+
   margin: 20px 20px 20px 20px;
 }
 
@@ -30,15 +31,12 @@ ul {
   padding: 10px;
   overflow: hidden;
   background-color: #333333;
+  color: rgb(57,161,209);
+  box-shadow: 5px 5px rgb(57,161,209);
+  /* max-width: 500px; */
 }
 
 ol {
-margin: 30px 30px 0px 0px;
-max-width: 500px;
-list-style-image: url('/images/muscle.png');
-}
-
-content{
 margin: 30px 30px 0px 0px;
 max-width: 500px;
 }
@@ -62,16 +60,17 @@ li a:hover {
 
 td, th {
   text-align: left;
-  padding: 10px 20px 0px 0px;
+
 }
 
 td {
-  padding: 10px 20px 0px 0px;
+
 }
 
 th {
   padding: 0px 20px 10px 0px;
-  border-bottom: 1px solid rgb(255, 255, 255);
+  border-bottom: 5px solid #333333;
+
 }
 
 table {
@@ -81,7 +80,7 @@ table {
 
 .btn {
   border:0px none;
-  border-radius: 5%;
+  box-shadow: 5px 5px grey;
   padding: 10px 10px;
   color: rgb(255, 255, 255);
   cursor:pointer;
@@ -91,6 +90,7 @@ table {
 
 .btn--booking {
   background-color: #333333;
+  box-shadow: 5px 5px rgb(57,161,209);
 }
 
 .btn--wrapper {
@@ -103,4 +103,46 @@ table {
 
 .btn--new {
   background-color: #333333;
+  box-shadow: 5px 5px rgb(57,161,209);
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #333333;
+  box-shadow: 5px 5px grey;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: 'Rubik';
+}
+
+input[type=text]  {
+  border: 2px solid 333333;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+input[type=number]  {
+  border: 2px solid 333333;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+a:link, a:visited {
+color: rgb(57,161,209)
+}
+
+div.lessons, div.bookings, div.members {
+
+  list-style-type: none;
+  margin: 0px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #333333;
+  color: rgb(57,161,209);
+  box-shadow: 5px 5px rgb(57,161,209);
+  max-width: 450px;
+
 }
