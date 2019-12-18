@@ -5,14 +5,14 @@ DROP TABLE lessons;
 CREATE TABLE members
 (
   id SERIAL primary key,
-  name VARCHAR(255) not null,
+  name VARCHAR(255), not null
   age INT
 );
 
 CREATE TABLE lessons
 (
   id SERIAL primary key,
-  name VARCHAR(255) not null,
+  name VARCHAR(255),
   lessondate VARCHAR(255)
 );
 
@@ -22,4 +22,3 @@ CREATE TABLE bookings
   lesson_id INT references lessons(id),
   member_id INT references members(id)
 );
-

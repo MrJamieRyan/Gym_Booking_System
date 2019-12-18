@@ -10,6 +10,12 @@ get '/members/?' do
   erb ( :"members/index" )
 end
 
+get '/members/new' do
+  @member = Member.new(params)
+  @member.save
+  erb(:"members/new")
+end
+
 get '/members/:id/?' do
   @member = Member.find(params[:id])
   erb(:"members/show")
