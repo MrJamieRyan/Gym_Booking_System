@@ -25,14 +25,8 @@ post '/members/:id/update' do
   erb(:"members/:id/update")
 end
 
-post '/students/?' do
+post '/members/?' do
   @member = Member.new(params)
   @member.save
   erb(:"members/create")
 end
-
-
-
-
-
-
