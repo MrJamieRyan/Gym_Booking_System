@@ -5,8 +5,9 @@ DROP TABLE lessons;
 CREATE TABLE members
 (
   id SERIAL primary key,
-  name VARCHAR(255), not null
-  age INT
+  name VARCHAR(255),
+  age INT,
+  address VARCHAR(255)
 );
 
 CREATE TABLE lessons

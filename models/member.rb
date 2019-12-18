@@ -2,7 +2,7 @@ require_relative( '../db/sql_runner' )
 
 class Member
 
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :address
   attr_reader :id
 
 
@@ -10,20 +10,22 @@ class Member
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @age = options['age'].to_i
+    @address = options['address']
   end
 
   def save()
     sql = "INSERT INTO members
     (
       name,
-      age
+      age,
+      address
     )
     VALUES
     (
-      $1, $2
+      $1, $2, $3
     )
     RETURNING id"
-    values = [@name, @age]
+    values = [@name, @age, @address]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -59,19 +61,27 @@ class Member
     SET
     (
       name,
-      age
+      age,
+      address
     )
     VALUES
     (
-      $1, $2
+      $1, $2, $3
     )
-    WHERE id = $3"
-    values = [@name, @age, @id]
+    WHERE id = $4"
+    values = [@name, @age, @address, @id]
     SqlRunner.run(sql, values)
   end
 
   def self.map_items(member_data)
     return member_data.map { |member| Member.new(member) }
+  end
+
+  def delete()
+    sql = "DELETE FROM members
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
   end
 
 end

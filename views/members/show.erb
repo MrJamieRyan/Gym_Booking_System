@@ -1,9 +1,10 @@
-<link type="text/css" rel="stylesheet" href="style.css"/>  
+<link type="text/css" rel="stylesheet" href="style.css"/>
 
 <p>Here are the members details</p>
 
 <p>Name: <%=@member.name.capitalize%></p>
 <p>Age: <%=@member.age%></p>
+<p>Address: <%=@member.address%></p>
 
 <form action="/members/<%=@member.id%>/edit" method="get">
   <input type="submit" value="EDIT member">
@@ -12,5 +13,3 @@
 <form action="/members/<%=@member.id%>/delete" method="post">
   <input type="submit" value="DELETE member">
 </form>
-
-

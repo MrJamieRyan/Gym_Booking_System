@@ -11,8 +11,6 @@ get '/members/?' do
 end
 
 get '/members/new' do
-  @member = Member.new(params)
-  @member.save
   erb(:"members/new")
 end
 
@@ -35,4 +33,10 @@ post '/members/?' do
   @member = Member.new(params)
   @member.save
   erb(:"members/create")
+end
+
+post '/members/:id/delete' do
+  @member = Member.find(params[:id])
+  @member.delete
+  erb(:"/members/delete")
 end

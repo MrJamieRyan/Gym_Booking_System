@@ -9,28 +9,32 @@ Lesson.delete_all()
 
 member1 = Member.new({
   "name" => "Jamie Ryan",
-  "age" => "35"
+  "age" => "35",
+  "address" => "1 High Street"
 })
 
 member1.save()
 
 member2 = Member.new({
   "name" => "Lauren Osinski",
-  "age" => "32"
+  "age" => "32",
+  "address" => "1 High Street"
 })
 
 member2.save()
 
 member3 = Member.new({
   "name" => "Loki Dog",
-  "age" => "1"
+  "age" => "1",
+  "address" => "1 High Street"
 })
 
 member3.save()
 
 member4 = Member.new({
   "name" => "Jake Davitt",
-  "age" => "15"
+  "age" => "15",
+  "address" => "1 High Street"
 })
 
 member4.save()
