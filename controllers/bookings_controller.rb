@@ -1,11 +1,9 @@
 require( 'sinatra' )
-require( 'sinatra/contrib/all' )
-require( 'pry' )
+require('sinatra/contrib/all') if development?
 require_relative( '../models/booking.rb' )
 require_relative( '../models/lesson.rb' )
 require_relative( '../models/member.rb' )
 require_relative( '../models/action.rb' )
-also_reload( '../models/*' )
 
 get '/bookings' do
   @bookings = Booking.all
